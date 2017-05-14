@@ -2,7 +2,7 @@
 
  * Store something in the repository database.
  * Helpful in building sample data.
- * Categorizes data.
+ * Auto categorizes data.
 
 
 ## Examples
@@ -31,7 +31,7 @@
       `data_type` varchar(255) NOT NULL COMMENT 'Warehouse Data Type/Category',
       `data_value` varchar(255) NOT NULL COMMENT 'Warehouse Data Value',
       PRIMARY KEY (`data_id`),
-      UNIQUE KEY `data_type` (`data_type`,`data_value`) COMMENT 'Unique Data'
+      UNIQUE KEY `data_type` (`data_type`, `data_value`) COMMENT 'Unique Data'
     ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 
