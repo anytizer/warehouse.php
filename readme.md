@@ -28,7 +28,7 @@
 
     CREATE TABLE `warehouse_data` (
       `data_id` varchar(255) NOT NULL COMMENT 'Warehouse ID',
-      `data_type` varchar(255) NOT NULL COMMENT 'Warehouse Data Name',
+      `data_type` varchar(255) NOT NULL COMMENT 'Warehouse Data Type/Category',
       `data_value` varchar(255) NOT NULL COMMENT 'Warehouse Data Value',
       PRIMARY KEY (`data_id`),
       UNIQUE KEY `data_type` (`data_type`,`data_value`) COMMENT 'Unique Data'
