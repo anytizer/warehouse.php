@@ -25,6 +25,13 @@
     warehouse lastname Doe
 
 
+### CLI Mining
+
+Pulls a random record from selected data tye (category).
+
+    mine CATEGORY
+
+
 ### Aliasing
 (Refer to ./bin/)
 

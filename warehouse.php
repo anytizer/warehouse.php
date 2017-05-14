@@ -26,5 +26,5 @@ else
 	$success = $warehouse->store($category, $value);
 
 	$status = $success?"ok":"fail";
-	echo $status;
+	echo "\r\n\t", $status, "\r\n";
 }
