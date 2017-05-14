@@ -1,21 +1,23 @@
 {
-	"name": "anytizer/warehouse.php",
-	"description": "Warehouse data",
-	"type": "library",
-	"keywords": [
-		"warehouse",
-	],
-	"authors": [
-		{
-			"role": "Developer"
-		}
-	],
-	"minimum-stability": "stable",
-	"prefer-stable": true,
-	"require": {
-		"php": ">=7.0"
-	},
-	"autoload": {
-		"files": ["src/libraries/classes/common/class.warehouse.inc.php"]
-	}
+  "name": "anytizer/warehouse.php",
+  "description": "Warehouse data",
+  "type": "library",
+  "keywords": [
+    "warehouse"
+  ],
+  "authors": [
+    {
+      "role": "Developer"
+    }
+  ],
+  "minimum-stability": "stable",
+  "prefer-stable": true,
+  "require": {
+    "php": ">=7.0"
+  },
+  "autoload": {
+    "files": [
+      "src/libraries/classes/common/class.warehouse.inc.php"
+    ]
+  }
 }
