@@ -1,0 +1,22 @@
+{
+	"name": "anytizer/warehouse.php",
+	"description": "Warehouse data",
+	"type": "library",
+	"keywords": [
+		"warehouse",
+		"mine",
+	],
+	"authors": [
+		{
+			"role": "Developer"
+		}
+	],
+	"minimum-stability": "stable",
+	"prefer-stable": true,
+	"require": {
+		"php": ">=7.0"
+	},
+	"autoload": {
+		"files": ["src/libraries/classes/common/class.warehouse.inc.php"]
+	}
+}
