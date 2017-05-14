@@ -1,3 +1,6 @@
 tests\warehouse
- [x] Warehouse
+ [x] Warehouse first name
+ [x] Warehouse last name
+ [x] Duplicate record
+ [x] Sql injection safe
 
