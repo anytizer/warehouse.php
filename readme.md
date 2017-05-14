@@ -8,20 +8,28 @@
 ## Examples
 
 
-### php
+### PHP
 
     $warehouse = new warehouse();
 	$warehouse->store("firstname", "John");
 	$warehouse->store("lastname", "Doe");
 
 
-### cli
+### CLI
+(Refer to ./bin/)
 
     php -f warehouse.php firstname John
     php -f warehouse.php lastname Doe
     
 	warehouse firstname John
     warehouse lastname Doe
+
+
+### Aliasing
+(Refer to ./bin/)
+
+    lastname LASTNAME
+	firstname FIRSTNAME
 
 
 ## SQL Table Structure
