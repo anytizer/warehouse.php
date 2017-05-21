@@ -8,18 +8,30 @@ require_once("src/libraries/classes/common/class.mine.inc.php");
 
 use common\mine;
 
-if(count($argv)!=2)
+switch(count($argv))
 {
-	echo "\r\n", "Usage: mine CATEGORY";
-	echo "\r\n";
-	die();
-}
-else
-{
-	$category = $argv[1];
+    case 2:
+        // mine 1 record
+        $category = $argv[1];
 
-	$mine = new mine();
-	$data = $mine->get($category);
+        $mine = new mine();
+        $data = $mine->get($category, 1);
 
-	echo "\r\n\t", $data, "\r\n";
+        echo "\r\n\t", print_r($data, true), "\r\n";
+        break;
+    case 3:
+        // mine n records
+        $category = $argv[1];
+        $limit = (int)$argv[2];
+
+        $mine = new mine();
+        $data = $mine->get($category, $limit);
+        #print_r($data);
+
+        echo "\r\n\t", print_r($data, true), "\r\n";
+        break;
+    default:
+        echo "\r\n", "Usage: mine CATEGORY LIMITS";
+        echo "\r\n";
+        break;
 }

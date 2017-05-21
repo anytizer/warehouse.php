@@ -8,17 +8,20 @@ class mine extends database
 		parent::__construct();
 	}
 
-	public function get(string $data_type): string
+	public function get(string $data_type, int $limit = 1): array
     {
-		$sql="SELECT data_value FROM warehouse_data WHERE data_type=:data_type ORDER BY RAND() LIMIT 1;";
+        $limit = abs($limit);
+        $limit = ($limit >= 1 && $limit <=9999)?$limit:1;
+		$sql="SELECT data_value data FROM warehouse_data WHERE data_type=:data_type ORDER BY RAND() LIMIT {$limit};";
 		# echo $sql;
 
 		$statement = $this->connection->prepare($sql);
 		$statement->bindValue(":data_type", $data_type);
 
 		$success = $statement->execute();
-		$data = $statement->fetch(\PDO::FETCH_ASSOC);
+		$data = $statement->fetchAll(\PDO::FETCH_ASSOC);
+        #print_r($data);
 		
-		return $data["data_value"]??"";
+		return $data;
     }
 }
