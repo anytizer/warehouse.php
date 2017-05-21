@@ -30,6 +30,9 @@
 Pulls a random record from selected data tye (category).
 
     mine CATEGORY
+    mine CATEGORY LIMIT
+
+Default `LIMIT` is 1. Accepts value between 1 and 9999. This parameter is optional.
 
 
 ### Aliasing
